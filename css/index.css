@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2188b6;
+    color: #cee4ef;
+
+}
+
+.top span {
+    color: white;
+}
+
+/* logo部分样式 */
+.warp {
+    width: 1120px;
+    margin: 0 auto;
+    height: 38px;
+    padding: 8px 16px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.warp .w-left {
+    width: 400px;
+    height: 38px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.warp .w-left>a {
+    width: 93px;
+    height: 42px;
+}
+
+.warp .w-left>a img {
+    width: 93px;
+    height: 42px;
+}
+
+.warp .w-left div a {
+    text-decoration: none;
+    color: #676767;
+}
+
+.warp .w-right {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .warp .w-right svg {
+    background-color: grey;
+} */
+
+/* 快速可靠安全部分样式 */
+.hero {
+    height: 344px;
+    padding: 32px 0;
+    background-color: #2188b6;
+}
+
+.hero .h-main {
+    width: 1110px;
+    height: 100px;
+    padding: 0 15x;
+    margin: 0 auto;
+    /* background-color: white; */
+}
+
+.hero .h-main h1 {
+    font-size: 72px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hero .h-main .h-main-c {
+    width: 100%;
+    height: 64px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+.hero .h-main .h-main-c a {
+    padding: 18px 36px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #1476a2;
+    border-radius: 5px;
+    margin-right: 18px;
+}
+
+.hero .h-main .h-main-c .btn {
+    width: 54px;
+    height: 22px;
+    padding: 3px 10px 3px 8px;
+    margin-left: 24px;
+    border: 1px solid #1476a2;
+    background-color: #f0f0f0;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero .h-main .h-main-c a:hover {
+    border: 2px solid transparent;
+    background-color: white;
+    color: #1476a2;
+}
+
+.hero .h-main .h-main-c .btn:hover {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.hero .h-main .version {
+    margin-top: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.hero .h-main .version a {
+    color: white;
+    font-weight: bold;
+}
+
+.hero .h-main .version-bottom {
+    margin-top: 10px;
+    color: white;
+}
+
+/* 快速可靠安全主要内容部分样式 */
+.content {
+    width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.content .c-one {
+    height: 316px;
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .c-one img {
+    width: 432.5px;
+    height: 346px;
+}
+
+.content .c-one .c-one-font,
+.content .c-two .c-two-font,
+.content .c-three .c-three-font {
+    width: 617.5px;
+    /* height: 195px; */
+    /* background-color: red; */
+    padding: 0 15px;
+}
+
+.content .c-one .c-one-font h2,
+.content .c-two .c-two-font h2,
+.content .c-three .c-three-font h2 {
+    color: #5a5a5a;
+    font-size: 45px;
+    margin: 56px 0 16px;
+    font-weight: lighter;
+}
+
+.content .c-one .c-one-font p,
+.content .c-two .c-two-font p,
+.content .c-three .c-three-font p {
+    color: #6d767d;
+    font-size: 21px;
+    margin-bottom: 16px;
+    font-weight: lighter;
+}
+
+.content hr {
+    margin: 40px 0 30px 0;
+    color: #e5e5e5;
+}
+
+
+.content .c-two {
+    height: 265px;
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .c-two img {
+    width: 375px;
+    height: 382px;
+    margin-top: -50px;
+}
+
+.content .c-three {
+    height: 259px;
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .c-three img {
+    width: 432.5px;
+    height: 259.5px;
+}
+
+/* wait部分样式 */
+.wait {
+    height: 72px;
+    padding: 32px 0;
+    background-color: #2188b6;
+    margin-bottom: 48px;
+}
+
+.wait .w-main {
+    width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wait .w-main h2 {
+    font-size: 48px;
+    color: white;
+}
+
+.wait .w-main a {
+    padding: 18px 36px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #1476a2;
+    border-radius: 5px;
+}
+
+.wait .w-main a:hover {
+    border: 2px solid transparent;
+    background-color: white;
+    color: #1476a2;
+}
+
+/* 六个介绍部分样式 */
+.six-warp {
+    width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.six-warp .s-w-big {
+    width: 1140px;
+    height: 352px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.six-warp .s-w-big div {
+    width: 350px;
+    height: 128px;
+    padding: 0 15px;
+    margin-bottom: 48px;
+}
+
+.six-warp .s-w-big div h2 {
+    color: #464a4c;
+    margin-bottom: 8px;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.six-warp .s-w-big div p {
+    color: #6d767d;
+    font-size: 17.6px;
+    margin-bottom: 16px;
+    font-weight: lighter;
+}
+
+.last-hr {
+    margin: 48px 0;
+}
+
+/* 底部部分样式 */
+.bottom {
+    width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-left span:nth-child(1) {
+    color: #5a5a5a;
+    font-size: 16px;
+}
+
+.bottom span a {
+    color: #117cad;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.bottom span a:hover {
+    color: #0a4a67;
+    text-decoration: underline;
+}
