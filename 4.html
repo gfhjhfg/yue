@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <!-- 【数组中的第⼆⼤元素】编写⼀个函数，接收⼀个数组作为输⼊，
+     并返回该数组中的第⼆⼤元素。如果不存在第⼆⼤元素，
+     则返回 null 或 undefined 。 -->
+    <!-- <script>
+        function secondMax(arr){
+            var a=0;
+            for (var i = 1; i < arr.length; i++) {
+                var max=arr[0];
+                if(arr[i]>max){
+                    max=arr[i];
+                    a=i;
+                }
+            }
+            
+            var b=arr.splice(a,1);
+            console.log(b);
+            console.log(arr);
+            return arr;
+        }
+        var arr = [11, 3, 8, 1, 7];
+        var arr = secondMax(secondMax(arr));
+        console.log(arr);
+        // if(sortedArray==1){
+        //     console.log(null);
+        // }else{
+        //     console.log(sortedArray[-2]); 
+        // }
+    </script> -->
+    <script>
+        function findSecondLargest(arr) {
+            if (arr.length < 2) {
+                return null;
+            }
+            var largest = Math.max(arr[0], arr[1]);
+            var secondLargest = Math.min(arr[0], arr[1]);
+            for (var i = 2; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    secondLargest = largest;
+                    largest = arr[i];
+                } else if (arr[i] > secondLargest && arr[i] !== largest) {
+                    secondLargest = arr[i];
+                }
+            }
+            return secondLargest === largest ? null : secondLargest;
+        }
+        // 测试 findSecondLargest
+        console.log(findSecondLargest([3, 5, 1, 2, 4]));
+        console.log(findSecondLargest([1, 2, 2, 2]));
+    </script>
+</body>
+</html>

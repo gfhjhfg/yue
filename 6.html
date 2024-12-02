@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <!-- 【数组去重】编写⼀个函数，接受⼀个数组作为输⼊，
+     并返回⼀个去除重复元素后的新数组，需要两种⽅法。 -->
+    <!-- <script>
+        function toUnique(arr1) {
+            var arr2 = [];
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr2.indexOf(arr1[i]) == -1) {
+                    arr2.push(arr1[i]);
+                }
+            }
+            // console.log(arr2);
+            return arr2;
+        }
+        var arr1 = [1, 2, 4, 2, 5, 3, 5, 4, 7, 3, 5];
+        var arr1 = toUnique(arr1);
+        console.log(arr1);
+    </script> -->
+
+    <script>
+        function toUnique(arr) {
+            // if (!Array.isArray(arr)) {
+            //     throw new Error("输入应该是一个数组");
+            // }
+            var arr1 = arr.join("");
+            var arr2 = "";
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr2.indexOf(arr1[i]) === -1) {
+                    arr2 += arr1[i];
+                }
+            }
+            return arr2.split("");
+        }
+        var a = [1, 2, 4, 2, 5, 3, 5, 4, 7, 3, 5];
+        // var a = ["a", "b", "b", "c", "d", "d"];
+        console.log(toUnique(a));
+    </script>
+</body>
+</html>

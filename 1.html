@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <!-- 【字符串替换】编写⼀个函数，接收三个参数：原字符串、
+     待替换的⼦字符串以及替换后的⼦字符串。函数应返回将原字符串
+     中所有待替换的⼦字符串替换为替换后的⼦字符串的结果。 -->
+    <script>
+        function replaceString(str, target, replacement) {
+            console.log(str.split(target));
+            // console.log(str.split(target).join(replacement));
+            return str.split(target).join(replacement);
+        }
+        // var str="hello world";
+        // var target='world';
+        // var replacement='there';
+        //var a=replaceString("hello world safsa", "world", "there"); // 输出: "hello there"
+        var a=replaceString("aa ss ff dd fd", "ss", "11"); // 输出: "hello there"
+        // var a=replaceString("abc abc abc", "abc", "123"); // 输出: "123 123 123"
+        console.log(a);
+    </script>
+</body>
+</html>

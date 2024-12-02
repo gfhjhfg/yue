@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <!-- 【验证字符串是否为有效的括号序列】编写⼀个函数，
+    接收⼀个只包含字符 '(', ')', '{', '}', '[' 和 ']' 
+    的字符串，判断字符串是否是⼀个有效的括号序列。   -->
+    <!-- <script>
+        function isValid(str){
+            // var str=prompt("请输入一串字符串");
+            for(var j=0;j<str.length;j++){
+            if (str[j]!= '[' && str[j]!= ']' && str[j]!= '{' && str[j]!= '}'
+             && str[j]!= '(' && str[j]!= ')') {
+                console.log(1);
+                return 1;
+                }
+            }
+            if(str.length%2!=0){
+                console.log(2);
+                return 1;
+            }
+            for(var i=0;i<str.length;i++){
+                if(str[i] === "(") {
+                if (str[i+1] === "]"||str[i+1] === "}") {
+                    console.log(3);
+                    return 1;
+                    break;
+                }
+            } else if(str[i] === "[") {
+                if (str[i+1] === ")"||str[i+1] === "}") {
+                    console.log(3);
+                    return 1;
+                    break;
+                }
+            } else if(str[i] === "{") {
+                if (str[i+1] === "]"||str[i+1] === ")") {
+                    console.log(3);
+                    return 1;
+                    break;
+                }
+            }
+            }
+        }
+        // var str="4r";
+        // var str="([)]";
+        // var str="()[]{}";
+        var str="{()}[]"
+        var a=isValid(str);
+        if(a==1){
+            console.log(false);
+        }else{
+            console.log(true);
+            
+        }
+    </script> -->
+    <!-- <script>
+        function isValid(s) {
+            const stack = [];
+            const pairs = {
+                '(': ')',
+                '[': ']',
+                '{': '}'
+            };
+            for (const char of s) {
+                if (pairs[char]) {
+                    stack.push(char);
+                } else {
+                    const lastOpen = stack.pop();
+                    if (pairs[lastOpen]!== char) {
+                        return false;
+                    }
+                }
+            }
+            return stack.length === 0;
+        }
+    </script> -->
+    <script>
+        function isValid(str) {
+            var stack = [];
+            for (var i = 0; i < str.length; i++) {
+                var char = str[i];
+                if (char === '(' || char === '[' || char === '{') {
+                    stack.push(char);
+                } else if (char === ')') {
+                    if (stack.length === 0 || stack.pop()!== '(') {
+                        return false;
+                    }
+                } else if (char === ']') {
+                    if (stack.length === 0 || stack.pop()!== '[') {
+                        return false;
+                    }
+                } else if (char === '}') {
+                    if (stack.length === 0 || stack.pop()!== '{') {
+                        return false;
+                    }
+                }
+            }
+            return stack.length === 0;
+        }
+        var a=isValid("()"); // 输出: true
+        // var a=isValid("()[]{}"); // 输出: true
+        // var a=isValid("(]"); // 输出: false
+        // var a=isValid("([)]"); // 输出: false
+        // var a=isValid("{[]}"); // 输出: true
+        console.log(a);
+    </script>
+</body>
+</html>
